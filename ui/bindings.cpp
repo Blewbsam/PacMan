@@ -10,7 +10,8 @@ PYBIND11_MODULE(pacman, m) {
     py::class_<GameState>(m, "GameState")
         .def(py::init<>())
         .def("game_over",&GameState::isGameOver)
-        .def("get_score", &GameState::getScore);
+        .def("get_score", &GameState::getScore)
+        .def("is_game_lost",&GameState::isGameLost);
 
     py::class_<Display>(m, "Display")
         .def(py::init<GameState*>())

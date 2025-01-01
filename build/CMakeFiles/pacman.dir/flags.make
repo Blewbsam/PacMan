@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = -Dpacman_EXPORTS
 
-CXX_INCLUDES = -I/opt/homebrew/Cellar/sfml/2.6.2/include -isystem /opt/homebrew/include -isystem /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13
+CXX_INCLUDES = -I/opt/homebrew/Cellar/sfml/2.6.2/include -isystem /opt/homebrew/include -isystem /Users/samsalehi/miniforge3/include/python3.12
 
 CXX_FLAGSarm64 = -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.5 -fPIC -fvisibility=hidden -flto
 

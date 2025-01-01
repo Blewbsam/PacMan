@@ -25,7 +25,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/pacman.dir/ui/main.cpp.o.d"
   "CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o"
   "CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o.d"
-  "pacman.cpython-313-darwin.so"
+  "pacman.cpython-312-darwin.so"
   "pacman.pdb"
 )
 

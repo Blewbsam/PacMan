@@ -6425,6 +6425,7 @@ CMakeFiles/pacman.dir/ui/bindings.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_time_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_timespec.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_timeval.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_timeval64.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_u_char.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_u_int.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_u_int16_t.h \
@@ -6450,6 +6451,7 @@ CMakeFiles/pacman.dir/ui/bindings.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/stat.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/syslimits.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/time.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/unistd.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/wait.h \
@@ -6488,6 +6490,117 @@ CMakeFiles/pacman.dir/ui/bindings.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/ghostUI.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/globalsUI.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/pacmanUI.hpp \
+  /Users/samsalehi/miniforge3/include/python3.12/Python.h \
+  /Users/samsalehi/miniforge3/include/python3.12/abstract.h \
+  /Users/samsalehi/miniforge3/include/python3.12/bltinmodule.h \
+  /Users/samsalehi/miniforge3/include/python3.12/boolobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/bytearrayobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/bytesobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/ceval.h \
+  /Users/samsalehi/miniforge3/include/python3.12/codecs.h \
+  /Users/samsalehi/miniforge3/include/python3.12/compile.h \
+  /Users/samsalehi/miniforge3/include/python3.12/complexobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/abstract.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/bytearrayobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/bytesobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/cellobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/ceval.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/classobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/code.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/compile.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/complexobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/context.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/descrobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/dictobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/fileobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/fileutils.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/floatobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/frameobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/funcobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/genobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/import.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/initconfig.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/listobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/longintrepr.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/longobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/memoryobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/methodobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/modsupport.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/object.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/objimpl.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/odictobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/picklebufobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pyctype.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pydebug.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pyerrors.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pyfpe.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pyframe.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pylifecycle.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pymem.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pystate.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pythonrun.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pythread.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/pytime.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/setobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/sysmodule.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/traceback.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/tupleobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/unicodeobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/warnings.h \
+  /Users/samsalehi/miniforge3/include/python3.12/cpython/weakrefobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/descrobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/dictobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/enumobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/exports.h \
+  /Users/samsalehi/miniforge3/include/python3.12/fileobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/fileutils.h \
+  /Users/samsalehi/miniforge3/include/python3.12/floatobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/frameobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/genericaliasobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/import.h \
+  /Users/samsalehi/miniforge3/include/python3.12/intrcheck.h \
+  /Users/samsalehi/miniforge3/include/python3.12/iterobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/listobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/longobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/memoryobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/methodobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/modsupport.h \
+  /Users/samsalehi/miniforge3/include/python3.12/moduleobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/object.h \
+  /Users/samsalehi/miniforge3/include/python3.12/objimpl.h \
+  /Users/samsalehi/miniforge3/include/python3.12/osmodule.h \
+  /Users/samsalehi/miniforge3/include/python3.12/patchlevel.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pybuffer.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pycapsule.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pyconfig.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pyerrors.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pyframe.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pyhash.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pylifecycle.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pymacconfig.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pymacro.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pymath.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pymem.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pyport.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pystate.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pystats.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pystrcmp.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pystrtod.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pythonrun.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pythread.h \
+  /Users/samsalehi/miniforge3/include/python3.12/pytypedefs.h \
+  /Users/samsalehi/miniforge3/include/python3.12/rangeobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/setobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/sliceobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/structseq.h \
+  /Users/samsalehi/miniforge3/include/python3.12/sysmodule.h \
+  /Users/samsalehi/miniforge3/include/python3.12/traceback.h \
+  /Users/samsalehi/miniforge3/include/python3.12/tracemalloc.h \
+  /Users/samsalehi/miniforge3/include/python3.12/tupleobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/typeslots.h \
+  /Users/samsalehi/miniforge3/include/python3.12/unicodeobject.h \
+  /Users/samsalehi/miniforge3/include/python3.12/warnings.h \
+  /Users/samsalehi/miniforge3/include/python3.12/weakrefobject.h \
   /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Config.hpp \
   /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics.hpp \
   /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/BlendMode.hpp \
@@ -6585,128 +6698,7 @@ CMakeFiles/pacman.dir/ui/bindings.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
   /opt/homebrew/include/pybind11/pybind11.h \
   /opt/homebrew/include/pybind11/pytypes.h \
   /opt/homebrew/include/pybind11/stl.h \
-  /opt/homebrew/include/pybind11/typing.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/Python.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/abstract.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bltinmodule.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/boolobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bytearrayobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bytesobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/ceval.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/codecs.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/compile.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/complexobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/abstract.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/bytearrayobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/bytesobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/cellobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/ceval.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/classobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/code.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/compile.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/complexobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/context.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/critical_section.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/descrobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/dictobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/fileobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/fileutils.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/floatobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/frameobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/funcobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/genobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/import.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/initconfig.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/listobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/lock.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/longintrepr.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/longobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/memoryobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/methodobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/modsupport.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/monitoring.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/object.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/objimpl.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/odictobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/picklebufobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyatomic.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyatomic_gcc.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyctype.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pydebug.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyerrors.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyfpe.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyframe.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyhash.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pylifecycle.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pymem.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pystate.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pythonrun.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pythread.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pytime.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/setobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/sysmodule.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/traceback.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/tracemalloc.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/tupleobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/unicodeobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/warnings.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/weakrefobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/critical_section.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/descrobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/dictobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/enumobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/exports.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/fileobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/fileutils.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/floatobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/frameobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/genericaliasobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/import.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/intrcheck.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/iterobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/listobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/lock.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/longobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/memoryobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/methodobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/modsupport.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/moduleobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/monitoring.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/object.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/objimpl.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/osmodule.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/patchlevel.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyatomic.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pybuffer.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pycapsule.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyconfig.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyerrors.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyframe.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyhash.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pylifecycle.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymacconfig.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymacro.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymath.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymem.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyport.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystate.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystats.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystrcmp.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystrtod.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pythonrun.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pythread.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pytypedefs.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/rangeobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/setobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/sliceobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/structseq.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/sysmodule.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/traceback.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/tupleobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/typeslots.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/unicodeobject.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/warnings.h \
-  /opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/weakrefobject.h
+  /opt/homebrew/include/pybind11/typing.h
 
 CMakeFiles/pacman.dir/ui/display.cpp.o: /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/display.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
@@ -11159,8 +11151,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/perm_options.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/path.h:
@@ -11171,127 +11161,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/directory_entry.h:
 
+/Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/ghostUI.cpp:
+
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/agentUI.cpp:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/speeds.hpp:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/warnings.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/unicodeobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/setobject.h:
-
-/Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/ghostUI.cpp:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pythread.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pythonrun.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystrtod.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystate.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyport.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymem.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymacconfig.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pylifecycle.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyhash.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyframe.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyerrors.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyconfig.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pycapsule.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/objimpl.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/object.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/methodobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/floatobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/exports.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/enumobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/weakrefobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/sysmodule.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/setobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pythonrun.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pystate.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pymem.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyfpe.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyctype.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/picklebufobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/odictobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/object.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/warnings.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/monitoring.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/longobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/listobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/initconfig.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/import.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/genobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/floatobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/descrobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/intrcheck.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/critical_section.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/context.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/complexobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/code.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/classobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/methodobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/ceval.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/bytesobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/complexobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/codecs.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/fileutils.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bytesobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/boolobject.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bltinmodule.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/sysmodule.h:
 
 /opt/homebrew/include/pybind11/typing.h:
 
@@ -11315,13 +11189,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Sensor.hpp:
 
-/opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Mouse.hpp:
-
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Keyboard.hpp:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/GlResource.hpp:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/structseq.h:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Export.hpp:
 
@@ -11332,8 +11202,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/ContextSettings.hpp:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Context.hpp:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/unicodeobject.h:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/System/Vector3.inl:
 
@@ -11389,8 +11257,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/Image.hpp:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/compile.h:
-
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/Glsl.inl:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/Font.hpp:
@@ -11406,6 +11272,132 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/BlendMode.hpp:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics.hpp:
+
+/Users/samsalehi/miniforge3/include/python3.12/weakrefobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/unicodeobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/tupleobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/tracemalloc.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/traceback.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/sysmodule.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/structseq.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/setobject.h:
+
+/opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Mouse.hpp:
+
+/Users/samsalehi/miniforge3/include/python3.12/pythread.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pystrcmp.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pystats.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pyport.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pymacconfig.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pylifecycle.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pyframe.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pyerrors.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pyconfig.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/patchlevel.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/object.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/moduleobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/memoryobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/intrcheck.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/import.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/genericaliasobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/frameobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/fileutils.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/fileobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/exports.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/enumobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/weakrefobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/unicodeobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/tupleobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/traceback.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/sysmodule.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/setobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pythread.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pylifecycle.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pyframe.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/odictobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/objimpl.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pytime.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/object.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/longobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/import.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/genobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pystrtod.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/floatobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/descrobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/memoryobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/context.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/complexobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/compile.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/code.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/ceval.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/cellobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/bytesobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/ceval.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/boolobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/typeslots.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/bltinmodule.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/abstract.h:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/ui/ghosts/ghostUI.hpp:
 
@@ -11425,11 +11417,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/select.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_timeval64.h:
+
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/VideoMode.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_s_ifmt.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/listobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_filesec_t.h:
 
@@ -11471,8 +11463,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/bytearrayobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/student_t_distribution.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h:
@@ -11503,8 +11493,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymath.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/discard_block_engine.h:
 
 /opt/homebrew/include/pybind11/pybind11.h:
@@ -11517,17 +11505,15 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/funcobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/partial_sum.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/iota.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
+/Users/samsalehi/miniforge3/include/python3.12/pytypedefs.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/fileobject.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h:
 
@@ -11537,11 +11523,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.cpp:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/weakrefobject.h:
-
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.hpp:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghost.hpp:
+
+/Users/samsalehi/miniforge3/include/python3.12/descrobject.h:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/helper.cpp:
 
@@ -11613,8 +11599,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_rsize_t.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/import.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_nlink_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_mode_t.h:
@@ -11633,8 +11617,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_id_t.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/memoryobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_gid_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
@@ -11642,8 +11624,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_fd_def.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_fd_copy.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystrcmp.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_errno_t.h:
 
@@ -11653,11 +11633,7 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_ct_rune_t.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/traceback.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_blksize_t.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/lock.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_off_t.h:
 
@@ -11672,8 +11648,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pythread.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
@@ -11755,9 +11729,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/tuple:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/cellobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string_view:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/listobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string.h:
 
@@ -11778,8 +11752,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/new:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyerrors.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/streambuf:
 
@@ -11834,6 +11806,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cerrno:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/bitset:
+
+/Users/samsalehi/miniforge3/include/python3.12/pyhash.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/transform_reduce.h:
 
@@ -11891,6 +11865,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/machine/limits.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/compile.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/type_list.h:
@@ -11933,6 +11909,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_constructible.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/Python.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/xlocale/__wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
@@ -11959,6 +11937,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_assignable.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/fileutils.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Graphics/RenderTarget.hpp:
@@ -11968,6 +11948,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_swappable.h:
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/System/InputStream.hpp:
+
+/Users/samsalehi/miniforge3/include/python3.12/iterobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/bit:
 
@@ -11979,11 +11961,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__utility/to_underlying.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/rangeobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_reference_wrapper.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_reference.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pyfpe.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cwchar:
 
@@ -12023,6 +12005,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_fd_zero.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/pycapsule.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/sample.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/make_signed.h:
@@ -12037,8 +12021,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_integral.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pytime.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h:
@@ -12048,6 +12030,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_core_convertible.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/bytearrayobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
@@ -12068,6 +12052,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/operations.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/bytearrayobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_array.h:
 
@@ -12119,8 +12105,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyatomic_gcc.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/limits:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_class.h:
@@ -12134,10 +12118,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/conditional.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pylifecycle.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/fileutils.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/variant:
 
@@ -12154,8 +12134,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_callable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/bytearrayobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/apply_cv.h:
 
@@ -12199,8 +12177,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__tuple_dir/apply_cv.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/abstract.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__threading_support:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__thread/timed_backoff_policy.h:
@@ -12237,6 +12213,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/warnings.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ranges/empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_volatile.h:
@@ -12265,8 +12243,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/is_valid.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyframe.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/exception:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
@@ -12293,15 +12269,19 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/methodobject.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pyctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/bind_back.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/wchar.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/sliceobject.h:
+/Users/samsalehi/miniforge3/include/python3.12/cpython/modsupport.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_posix_vdisable.h:
 
@@ -12311,13 +12291,13 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/make_const_lvalue_ref.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/dictobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/construct_at.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pytypedefs.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/osmodule.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/frameobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/concepts.h:
 
@@ -12341,8 +12321,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/size.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/genericaliasobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__debug:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/permutable.h:
@@ -12363,6 +12341,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/Window/Clipboard.hpp:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/warnings.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_object.h:
@@ -12376,6 +12356,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/distance.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/advance.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pymem.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__hash_table:
 
@@ -12401,11 +12383,7 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/unique_ptr.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/abstract.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_locale.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pyatomic.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/normal_distribution.h:
 
@@ -12433,8 +12411,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_constant_evaluated.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/tupleobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/string.h:
@@ -12442,8 +12418,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__locale:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/typeslots.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/runetype.h:
 
@@ -12454,8 +12428,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/reduce.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/tracemalloc.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/xlocale.h:
 
@@ -12478,8 +12450,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/mem_fun_ref.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/mem_fn.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/descrobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_int8_t.h:
 
@@ -12505,8 +12475,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_minmax.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/objimpl.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/valarray:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
@@ -12514,6 +12482,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/uniform_random_bit_generator_adaptor.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pymacro.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 
@@ -12528,8 +12498,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/arm/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/bind_front.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pydebug.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__format/formatter.h:
 
@@ -12557,7 +12525,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pystate.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__errc:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/classobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
@@ -12571,13 +12543,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__config_site:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/monitoring.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/remove_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/traceback.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h:
 
@@ -12615,6 +12583,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/pystate.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_compound.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_count.h:
@@ -12628,8 +12598,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/knuth_b.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/longintrepr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_lower_bound.h:
 
@@ -12701,9 +12669,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/system_clock.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/memory:
+/Users/samsalehi/miniforge3/include/python3.12/complexobject.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyhash.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/memory:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/voidify.h:
 
@@ -12713,13 +12681,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_reverse_copy.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/moduleobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/set_intersection.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/year_month.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pymacro.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
 
@@ -12735,11 +12699,7 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/longobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/mach/machine/_structs.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/pyatomic.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/duration.h:
 
@@ -12813,8 +12773,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/transform.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/fileobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_is_sorted.h:
@@ -12841,8 +12799,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_find.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/dictobject.h:
-
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/System/Thread.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
@@ -12850,8 +12806,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/search_n.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/compile.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/generate_canonical.h:
 
@@ -12875,6 +12829,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/appleapiopts.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/dictobject.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_sort_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/replace_copy_if.h:
@@ -12885,11 +12841,17 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_max_element.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pymem.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_unique_copy.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/floatobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/any_of.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/listobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
 
@@ -12951,9 +12913,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__fwd/get.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/critical_section.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_remove_copy_if.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/initconfig.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_reverse.h:
 
@@ -12968,8 +12930,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_push_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_next_permutation.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/modsupport.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/binder1st.h:
 
@@ -13019,13 +12979,13 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/totally_ordered.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/longintrepr.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_min_element.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_swap_ranges.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/memoryobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/xlocale/_stdlib.h:
 
@@ -13053,9 +13013,13 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_find_first_of.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/rangeobject.h:
+
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/maze.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_replace_if.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/funcobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/replace_if.h:
 
@@ -13079,6 +13043,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__assert:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pyerrors.h:
+
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/inttypes.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/aligned_union.h:
@@ -13087,11 +13053,15 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /opt/homebrew/Cellar/sfml/2.6.2/include/SFML/System/String.hpp:
 
+/Users/samsalehi/miniforge3/include/python3.12/modsupport.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_copy_backward.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/frameobject.h:
+/Users/samsalehi/miniforge3/include/python3.12/codecs.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_fill.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/dictobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/partial_sort.h:
 
@@ -13117,8 +13087,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/ceval.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit_reference:
@@ -13127,13 +13095,13 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__utility/cmp.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/cpython/fileobject.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__fwd/memory_resource.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/gethostuuid.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/ostream:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/modsupport.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
 
@@ -13143,9 +13111,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pythonrun.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/Python.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/different_from.h:
 
@@ -13167,7 +13135,11 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_constructible.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/sliceobject.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__mutex_base:
+
+/Users/samsalehi/miniforge3/include/python3.12/objimpl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
@@ -13184,8 +13156,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/nat.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pybuffer.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/find_if.h:
 
@@ -13219,11 +13189,7 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_stdio.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/pystats.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/tupleobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/machine/signal.h:
 
@@ -13236,6 +13202,10 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/in_in_out_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/longobject.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/abstract.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/countl.h:
 
@@ -13259,15 +13229,23 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
 
+/Users/samsalehi/miniforge3/include/python3.12/pybuffer.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/all_of.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/mismatch.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__undef_macros:
 
+/Users/samsalehi/miniforge3/include/python3.12/pymath.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/decay.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/assume_aligned.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/cpython/picklebufobject.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/time.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
@@ -13297,9 +13275,9 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/minmax_element.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
+/Users/samsalehi/miniforge3/include/python3.12/bytesobject.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/patchlevel.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h:
 
@@ -13323,8 +13301,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_sample.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/lock.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_nth_element.h:
@@ -13345,15 +13321,13 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/boolean_testable.h:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/osmodule.h:
+/Users/samsalehi/miniforge3/include/python3.12/cpython/pydebug.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_fsfilcnt_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
-
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/iterobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
 
@@ -13373,13 +13347,15 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstdlib:
 
-/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13/cpython/frameobject.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/convertible_to.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/pythonrun.h:
+
+/Users/samsalehi/miniforge3/include/python3.12/methodobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/steady_clock.h:
 

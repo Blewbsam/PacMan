@@ -2,6 +2,7 @@ import sys
 import os
 import numpy
 import matplotlib.pyplot as plt
+from PIL import Image
 import torch
 from utils import *
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'build')) # relative path to build folder used for import
@@ -47,6 +48,13 @@ class Game:
 
 if __name__ == "__main__":
     game = Game()
+    k = 0
     while game.running():
-        game.update()   
-
+        k += 1
+        game.update()
+        state = game.get_state().numpy()
+        state = state.transpose(1,2,0)
+        # print(state.shape)
+        if k % 100 == 0:
+            plt.imshow(state)
+            plt.show()

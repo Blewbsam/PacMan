@@ -11,7 +11,6 @@ from model import DQNAgent
 from game import Game, DIRECTIONS
 
 
-
 BATCH_SIZE = 32
 GAMMA = 0.99
 EPS_START = 0.9
@@ -20,20 +19,21 @@ EPS_DECAY = 1000
 TAU = 0.005
 LR = 1e-4
 N_ACTIONS = 4
+EPISODES = 2
 SAVE_PATH = "weights/"
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
 
-policy_net = DQNAgent(N_ACTIONS).to(device)
-target_net = DQNAgent(N_ACTIONS).to(device)
-target_net.load_state_dict(policy_net.state_dict())
+# policy_net = DQNAgent(N_ACTIONS).to(device)
+# target_net = DQNAgent(N_ACTIONS).to(device)
+# target_net.load_state_dict(policy_net.state_dict())
 
-optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
-memory = ReplayMemory(10000)
+# optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
+# memory = ReplayMemory(10000)
 
 
 steps_done = 0
-def select_action(state):
+def select_action(policy_net,state):
     global steps_done
     sample = random.random()
     eps_threshold = EPS_END + (EPS_START - EPS_END) * math.exp(-1. * steps_done / EPS_DECAY)
@@ -42,9 +42,9 @@ def select_action(state):
         with torch.no_grad():
             return torch.tensor(policy_net(state).argmax(1),device=device,dtype=torch.long)
     else:
-        return torch.tensor([random.randint(0,3)], device=device, dtype=torch.long)
+        return torch.tensor([random.randint(0,N_ACTIONS-1)], device=device, dtype=torch.long)
 
-def optimize_model():
+def optimize_model(policy_net,target_net,optimizer,memory):
     if len(memory) < BATCH_SIZE:
         return
     transitions = memory.sample(BATCH_SIZE)
@@ -78,7 +78,11 @@ def optimize_model():
     torch.nn.utils.clip_grad_value_(policy_net.parameters(), 100)
     optimizer.step()
 
-def train(policy_net,target_net,optimizer,memory,num_epsiodes):
+
+    
+
+
+def train(policy_net,target_net,optimizer,memory,num_episodes):
     episode_steps = []
 
     for i_episode in range(num_episodes):
@@ -94,7 +98,6 @@ def train(policy_net,target_net,optimizer,memory,num_epsiodes):
                     state = game.get_state()
                     state_tensor = state.unsqueeze(0).to(device) if state is not None else None
                     reward = -1000 if game.is_game_lost() else 1000 # penalty for losing the game and extreme reward for winning
-                    # reward = -1000
                     reward_tensor = torch.tensor(reward).unsqueeze(0).to(device)
                     memory.push(prevState.unsqueeze(0),action.unsqueeze(0),state_tensor,reward_tensor)
                 continue
@@ -104,15 +107,13 @@ def train(policy_net,target_net,optimizer,memory,num_epsiodes):
             reward_tensor = torch.tensor(score - prevScore).unsqueeze(0).to(device)
             if (prevState != None):
                 memory.push(prevState.unsqueeze(0),action.unsqueeze(0),state.unsqueeze(0), reward_tensor)
-            # transition.next_state = state.unqueeze(0)
-            action = select_action(state)
+            action = select_action(policy_net,state)
             game.step(action.item())
-            # state = next_state.to(device) if next_state != None else None
             prevState = state
             prevScore = score
             
             # gradient calculations and step
-            optimize_model()
+            optimize_model(policy_net,target_net,optimizer,memory)
 
             # soft update of model parameters
             target_net_state_dict = target_net.state_dict()
@@ -121,26 +122,21 @@ def train(policy_net,target_net,optimizer,memory,num_epsiodes):
                 target_net_state_dict[key] = policy_net_state_dict[key]*TAU + target_net_state_dict[key]*(1-TAU)
             target_net.load_state_dict(target_net_state_dict)
         episode_steps.append(game.get_step_count())
-
-
     plot_steps(episode_steps)
 
-
-
-def main():
+    
+def main(load_path=None):
     policy_net = DQNAgent(N_ACTIONS).to(device)
+    if load_path != None:
+        policy_net.load_state_dict(torch.load(load_path,weights_only=True))
     target_net = DQNAgent(N_ACTIONS).to(device)
     target_net.load_state_dict(policy_net.state_dict())
 
     optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
     memory = ReplayMemory(10000)
+    train(policy_net,target_net,optimizer,memory,EPISODES)
 
-    train(policy_net,target_net,optimizer,model)
-
-
-
-
-
+    # torch.save(policy_net.state_dict(),f"{SAVE_PATH}/weights_{EPISODES}_episodes.pth") for saving
 
 if __name__ == "__main__":
     main()
