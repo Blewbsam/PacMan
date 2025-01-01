@@ -20,6 +20,8 @@ GameState::GameState() : ghostAI(this){
     ghostArray[3] = ghosts.stupid_p;
     score = 0;
     gameOver = false;
+    status = PROGRESS;
+
     setInitialGhostStates();
 }
 
@@ -164,6 +166,7 @@ void GameState::handlePowerPelletCollision() {
 void GameState::checkPelletStatus() {
     if (this->eatenPelletCount == this->maze_p->getTotalPelletCount()) {
         this->gameOver = true;
+        this->status = WON;
     }
 }
 
@@ -188,13 +191,18 @@ void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
         switch (ghost->getGhostState()){
             case SCATTER:
             case ESCAPE:
-            case CHASE: this->gameOver = true; break;
+            case CHASE: this->gameLost(); break;
             case TRANSITION:
             case FRIGHTENED: this->eatGhost(ghost);break;
         default: // eaten or asleep
             break;
         }
     }
+}
+
+void GameState::gameLost() {
+    this->gameOver = true;
+    this->status = LOST;
 }
 
 
@@ -302,6 +310,11 @@ void GameState::switchToNextState() {
 }
 
 
+
+
 bool GameState::isGameOver() const {return this->gameOver;}
 unsigned int GameState::getScore() const {return this->score;}
 
+bool GameState::isGameLost() const {
+    return this->status == LOST;
+}

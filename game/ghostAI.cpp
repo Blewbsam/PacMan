@@ -36,9 +36,6 @@ void GhostAI::moveAmbusher(AmbusherGhost * ambusher, Pacman * pacman) {
 }
 
 void GhostAI::moveStupid(StupidGhost * stupid, Pacman * pacman) {
-    printGhostState(stupid);
-    printGhostDir(stupid);
-    printPos(stupid->getPos());
     switch (stupid->getGhostState()) {
         case CHASE: moveChaseStupid(stupid,pacman); break;
         case SCATTER: moveScatterGhost(stupid); break;

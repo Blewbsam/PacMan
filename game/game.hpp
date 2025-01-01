@@ -15,7 +15,11 @@
 
 extern const std::unordered_map<GhostState,int> globalStateDurations;
 
-
+enum GameStatus {
+    LOST,
+    WON,
+    PROGRESS
+};
 
 
 // Pointer to created Ghosts fond on maze
@@ -39,6 +43,7 @@ class GameState {
     unsigned int eatenPelletCount;
     unsigned int score;
     bool gameOver;
+    GameStatus status;
 
 public:
     GameState();
@@ -101,6 +106,7 @@ public:
     bool isGameOver() const;
 
     unsigned int getScore() const;
+    bool isGameLost() const;
 
 
 private:
@@ -116,6 +122,9 @@ private:
     void handlePowerPelletCollision();
     void handleGhostCollisions();
     void handleGhostCollision(Ghost * ghost, Position pacmanPosition);
+
+
+    void gameLost(); // signifies that ghosts have collided
 
     // handles case when all pellets have been eaten.
     void checkPelletStatus();
