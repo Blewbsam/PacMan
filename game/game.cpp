@@ -191,6 +191,7 @@ void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
         switch (ghost->getGhostState()){
             case SCATTER:
             case ESCAPE:
+            case SLEEP:
             case CHASE: this->gameLost(); break;
             case TRANSITION:
             case FRIGHTENED: this->eatGhost(ghost);break;
@@ -308,8 +309,6 @@ void GameState::switchToNextState() {
         this->updateGlobalState(CHASE);
     }
 }
-
-
 
 
 bool GameState::isGameOver() const {return this->gameOver;}

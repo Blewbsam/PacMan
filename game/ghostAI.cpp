@@ -84,8 +84,6 @@ void GhostAI::moveChaseStupid(StupidGhost * stupid, Pacman * pacman) {
         targetPos = pacman->getPos();
     }
     this->moveToTarget(stupid,targetPos,true);
-    printGhostDir(stupid);
-
 }
 
 void GhostAI::moveChaseFickle(FickleGhost * fickle, Pacman * pacman, Position chaserPos) {

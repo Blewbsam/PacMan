@@ -7,14 +7,14 @@ class DQNAgent(nn.Module):
     def __init__(self,num_actions):
         super().__init__()
         self.model = nn.Sequential(
-            nn.Conv2d(in_channels=3,out_channels=1,kernel_size=4,stride=1),
+            nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, stride=1),  # Reduce spatial dimensions
             nn.ReLU(),
-            # nn.Conv2d(in_channels=3, out_channels=3, kernel_size=8, stride=2),
-            # nn.ReLU(),
-            # nn.Conv2d(in_channels=3,out_channels=3,kernel_size=32,stride=1),
-            # nn.ReLU(),
-            nn.Flatten(),            
-            nn.Linear(288, 512),  # Fully connected layer (dimensions must be fixed)
+            nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=32, out_channels=1, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Flatten(),
+            nn.Linear(195, 512),  # Adjust based on input size and strides
             nn.ReLU(),
             nn.Linear(512, num_actions),  # Output layer for Q-values
         )
@@ -22,27 +22,38 @@ class DQNAgent(nn.Module):
         return self.model(x)
 
 
+class DQRNAgent(nn.Module):
+    def __init__(self,num_actions):
+        super().__init__()
+        self.cnn = nn.Sequential(
+            nn.Conv2d(in_channels=3,out_channels=16,kernel_size=3,stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=32,out_channels=1,kernel_size=3,stride=1),
+            nn.ReLU(),
+            nn.Flatten()
+        )
+        self.lstm = nn.LSTM(input_size=195, hidden_size=512, batch_first=True)
+        self.fc = nn.Linear(512, num_actions)  # Output 4 actions
+    def forward(self, x):
+        batch_size, seq_len, channels, height, width = x.size()
+    
 
-# img = Image.open("test.png")
-# data = np.asarray(img)
-# data = data[:,:,:3]
-# data = data.transpose(2, 0, 1)
-
-# print(data.shape)
-
-# # Convert data to PyTorch tensor
-# data = torch.from_numpy(data).float()  # Convert to float32
-
-# # Add a batch dimension (batch_size, channels, height, width)
-# data = data.unsqueeze(0)  # Adds a batch dimension, making the shape (1, channels, height, width)
-# print(data.shape)
-
-# shape = data.shape
-
-# # Initialize the agent
-# agent = DQNAgent(shape, 4)
-# print(agent)
-
-# # Forward pass through the model
-# res = agent.forward(data)
-# print(res)
+        x = x.view(batch_size * seq_len, channels, height, width)  # Shape: [batch_size * seq_len, channels, height, width]
+        
+        x = self.cnn(x)  # Shape: [batch_size * seq_len, feature_dim]
+        
+        # Restore sequence dimension
+        feature_dim = x.size(-1)
+        x = x.view(batch_size, seq_len, feature_dim)  # Shape: [batch_size, seq_len, feature_dim]
+        
+        # Process with LSTM
+        lstm_out, (h_n, c_n) = self.lstm(x)  # LSTM output: [batch_size, seq_len, hidden_size]
+        
+        # Use the final hidden state for predictions
+        x = h_n[-1]  # Final hidden state: [batch_size, hidden_size]
+        
+        # Fully connected layer for output
+        x = self.fc(x)  # Output shape: [batch_size, num_actions]
+        return x

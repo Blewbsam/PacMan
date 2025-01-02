@@ -48,13 +48,9 @@ class Game:
 
 if __name__ == "__main__":
     game = Game()
-    k = 0
     while game.running():
-        k += 1
         game.update()
         state = game.get_state().numpy()
         state = state.transpose(1,2,0)
         # print(state.shape)
-        if k % 100 == 0:
-            plt.imshow(state)
-            plt.show()
+ 

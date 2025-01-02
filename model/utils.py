@@ -45,9 +45,44 @@ def transform_image_with_thresholding(img_array, threshold=100):
 
 
 
-def plot_steps(steps):
+def plot_steps(steps,path):
     plt.plot(steps)
+    plt.title("Number of decisions made by Agent across game")
+    plt.xlabel("Game Attempt")
+    plt.ylabel("Decision Count")
+    plt.savefig(path)
     plt.show()
+
+
+def plot_epsilons(epsilons,path):
+    plt.plot(epsilons)
+    plt.title("Epsilon probability of making random move across games")
+    plt.xlabel("Game Attempt")
+    plt.ylabel("Probability")
+    plt.savefig(path)
+    plt.show()
+
+def plot_scores(scores,path):
+    plt.plot(scores)
+    plt.title("Score of each game attempt")
+    plt.xlabel("Game Attempt")
+    plt.ylabel("Score")
+    plt.savefig(path)
+    plt.show()
+
+
+
+def print_verbose(episode,score,reward,loss,epsilon):
+    print("----------------------")
+    print(f"Epsiode: {episode}")
+    print(f"Score: {score}")
+    print(f"Reward: {reward}")
+    if (loss is not None):
+        print(f"Loss: {loss:.4f}")
+    print(f"Epsilon: {epsilon:.4f}")
+    print("----------------------")
+
+
 
 
 
