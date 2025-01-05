@@ -799,4 +799,5 @@ CMakeFiles/pacman.dir/game/game.cpp.o: \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/maze.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__tree \
-  /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.hpp
+  /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.hpp \
+  /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/helpers.hpp

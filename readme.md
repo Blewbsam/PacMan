@@ -51,7 +51,7 @@ The Neural network is to act as a q-function for us, giving us key values for ev
 
 ### Training Parameters and result:
 
-| Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Training time
+| Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay   |  Training Time (h) 
 | -------- | ------- | --------| -------------------| -------------| --------| --------|-------| ------
 | CNN_1000  |  CNN    | 1000 | See | 1e-4 | 0.99 | 128 | NA | See
 | RNN_5000 |  RNN    | 5000 |  550 | 1e-4  | 0.95 | 128 | 4 | NA

@@ -114,13 +114,16 @@ class ReplayMemory():
             raise ValueError("Memory size is smaller than the sequence length.")
 
         sample = []
-        for _ in range(batch_size):
+        b = 0
+        while b < batch_size:
             # Randomly select a starting index for the sequence
             start_idx = random.randint(0, len(self.memory) - sequence_length)
             # Slice the memory to get the sequence
-            sequence = []
-            for j in range(sequence_length):
-                sequence.append(self.memory[start_idx + j])
+            sequence = [self.memory[start_idx + j] for j in range(sequence_length)]
+
+            if any(x.next_state is None for x in sequence[:-1]): # sample must return terminal state as last vector only. Also makes samples be contained to their own game.
+                continue
             sample.append(sequence)
+            b += 1
 
         return sample

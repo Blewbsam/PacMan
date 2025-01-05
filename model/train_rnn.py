@@ -13,16 +13,16 @@ from collections import deque
 
 
 BATCH_SIZE = 128
-GAMMA = 0.95
+GAMMA = 0.99
 EPS_START = 0.9
 EPS_END = 0.05
-EPS_DECAY = 1000
+EPS_DECAY = 10000
 LR = 1e-4
 N_ACTIONS = 4
 EPISODES = 5000
 SAVE_PATH = "weights"
 STEP_FIG_PATH = "plots/RNN"
-SEQUENCE_LENGTH = 4
+SEQUENCE_LENGTH = 8
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
 
@@ -105,9 +105,9 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
     action_counts = []
     scores = []
     losses = []
-    sequence_buffer = deque([NULL_STATE for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH) # circular buffer
     
     for i_episode in range(num_episodes):
+        sequence_buffer = deque([NULL_STATE for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH)
         game = Game()
         prevState = None
         prevScore = 0

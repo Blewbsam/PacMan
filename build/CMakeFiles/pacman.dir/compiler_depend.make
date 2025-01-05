@@ -1595,6 +1595,7 @@ CMakeFiles/pacman.dir/game/game.cpp.o: /Users/samsalehi/Desktop/PersonalProjects
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghost.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/globals.hpp \
+  /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/helpers.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/maze.hpp \
   /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/pacman.hpp
 
@@ -11455,8 +11456,6 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/maze.cpp:
 
-/Users/samsalehi/Desktop/PersonalProjects/PacMan/game/helpers.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/random:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h:
@@ -11522,6 +11521,8 @@ CMakeFiles/pacman.dir/ui/pacmanUI.cpp.o: /Users/samsalehi/Desktop/PersonalProjec
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/accumulate.h:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.cpp:
+
+/Users/samsalehi/Desktop/PersonalProjects/PacMan/game/helpers.hpp:
 
 /Users/samsalehi/Desktop/PersonalProjects/PacMan/game/ghostAI.hpp:
 

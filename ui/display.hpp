@@ -57,6 +57,7 @@ private:
     // use the grid_t structure to render display
     void renderMaze(); 
 
+    void selectWall(sf::Sprite &sprite,grid_t& grid,size_t x, size_t y,size_t height, size_t width);
 
     void gameLost();
 
@@ -70,6 +71,7 @@ public:
     // render required portions onto the display
     void render();
 
+    
 
     void step(int i);
     void setPacmanDir(Direction dir);
