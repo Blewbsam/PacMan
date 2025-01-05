@@ -1,0 +1,14 @@
+prefix=/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env
+exec_prefix=/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env
+libdir=/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env/lib
+includedir=/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.3.18
+Requires: 
+Requires.private: 
+Libs: -L/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env/lib -lfreetype
+Libs.private: -lz -L/Users/samsalehi/Desktop/PersonalProjects/PacMan/model/env/lib -lpng16 -lz
+Cflags: -I${includedir}/freetype2

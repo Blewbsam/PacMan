@@ -62,11 +62,20 @@ def plot_epsilons(epsilons,path):
     plt.savefig(path)
     plt.show()
 
-def plot_scores(scores,path):
+def plot_scores(scores,path=None):
     plt.plot(scores)
     plt.title("Score of each game attempt")
     plt.xlabel("Game Attempt")
     plt.ylabel("Score")
+    if path is not None:
+        plt.savefig(path)
+    plt.show()
+
+def plot_loss(loss,path):
+    plt.plot(loss)
+    plt.title("Loss of each sampled batch used for training")
+    plt.xlabel("Iteration")
+    plt.ylabel("Huber loss")
     plt.savefig(path)
     plt.show()
 
@@ -85,7 +94,6 @@ def print_verbose(episode,score,reward,loss,epsilon):
 
 
 
-
 Transition = namedtuple('Transition',
                         ('state', 'action', 'next_state', 'reward'))
 
@@ -98,6 +106,21 @@ class ReplayMemory():
 
     def sample(self, batch_size):
         return random.sample(self.memory, batch_size)
-
     def __len__(self):
         return len(self.memory)
+
+    def sequence_sample(self,sequence_length,batch_size):
+        if len(self.memory) < sequence_length:  
+            raise ValueError("Memory size is smaller than the sequence length.")
+
+        sample = []
+        for _ in range(batch_size):
+            # Randomly select a starting index for the sequence
+            start_idx = random.randint(0, len(self.memory) - sequence_length)
+            # Slice the memory to get the sequence
+            sequence = []
+            for j in range(sequence_length):
+                sequence.append(self.memory[start_idx + j])
+            sample.append(sequence)
+
+        return sample

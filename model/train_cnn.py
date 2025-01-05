@@ -43,12 +43,15 @@ def select_action(policy_net,state):
 def optimize_model(policy_net,target_net,optimizer,memory):
     if len(memory) < BATCH_SIZE:
         return
-    transitions = memory.sample(BATCH_SIZE)
 
+    transitions = memory.sample(BATCH_SIZE)
     batch = Transition(*zip(*transitions))
 
     non_final_mask = torch.tensor(tuple(map(lambda s: s is not None, batch.next_state)), device=device, dtype=torch.bool)
-    non_final_next_states = torch.cat([s for s in batch.next_state if s is not None])
+    non_final_next_states = torch.cat([s for s in batch.next_state if s is not None]) # push empty arry when None
+    print()
+    print(non_final_next_states.shape)
+    print()
     state_batch = torch.cat(batch.state)
     action_batch = torch.cat(batch.action)
     reward_batch = torch.cat(batch.reward)
@@ -117,7 +120,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
             if action_count % (BATCH_SIZE/4) == 0:
                 # gradient calculations and step
                 loss = optimize_model(policy_net,target_net,optimizer,memory)
-
+                
                 if verbose:
                     print_verbose(i_episode,score,reward_tensor.item(),loss,epsilon)
 

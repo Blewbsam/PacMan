@@ -6,31 +6,27 @@ import math
 import time
 import random
 import matplotlib.pyplot as plt
-from utils import ReplayMemory, plot_steps, Transition, plot_epsilons,plot_scores,print_verbose
+from utils import ReplayMemory, plot_steps, Transition, plot_epsilons,plot_scores,print_verbose, plot_loss
 from model import DQRNAgent
 from game import Game, DIRECTIONS
 from collections import deque
 
 
 BATCH_SIZE = 128
-GAMMA = 0.99
+GAMMA = 0.95
 EPS_START = 0.9
 EPS_END = 0.05
-EPS_DECAY = 10000
-TAU = 0.005
+EPS_DECAY = 1000
 LR = 1e-4
 N_ACTIONS = 4
-EPISODES = 4
+EPISODES = 5000
 SAVE_PATH = "weights"
-STEP_FIG_PATH = "plots"
+STEP_FIG_PATH = "plots/RNN"
 SEQUENCE_LENGTH = 4
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
 
-
-
-
-
+NULL_STATE = torch.zeros(3,21,19).to(device)
 
 steps_done = 0
 def select_action(policy_net,buffer):
@@ -50,28 +46,66 @@ def select_action(policy_net,buffer):
     
 
 def optimize_model(policy_net,target_net,optimizer,memory):
+    if len(memory) < BATCH_SIZE:
+        print("Inadequate memory")
+        return
 
+    ## sample SEQUENCE_LEGNTH items of batch_size 
+    transitions = memory.sequence_sample(SEQUENCE_LENGTH,BATCH_SIZE)
+    # move conversions to memory itself
+    state_batch = torch.stack(
+        [torch.stack([step.state for step in sequence], dim=0)
+        for sequence in transitions], dim=0)
+
+    is_not_terminal = lambda x: x is not None
+    non_terminal_mask = torch.cat(
+        [torch.tensor([is_not_terminal(sequence[-1].next_state)],device=device,dtype=torch.bool)
+        for sequence in transitions], dim=0
+    )
+
+    get_non_terminal = lambda x: x if x is not None else NULL_STATE
+    non_terminal_next_states = torch.stack(
+        [torch.stack([get_non_terminal(step.next_state) for step in sequence],dim=0)
+        for sequence in transitions], dim=0
+    )
+
+
+    action_batch = torch.stack(
+        [torch.stack([step.action for step in sequence],dim=0)
+        for sequence in transitions], dim = 0)
+
+    selected_actions = action_batch[:, -1,0].unsqueeze(1)
+
+    reward_batch = torch.stack(
+        [torch.stack([step.reward for step in sequence],dim=0)
+        for sequence in transitions], dim = 0)
     
+    selected_rewards = reward_batch[:,-1,0]
 
+    state_action_values = policy_net(state_batch).gather(1,selected_actions)
 
+    next_state_values = torch.zeros(BATCH_SIZE,device=device)
 
+    with torch.no_grad():
+        target_Q_values = target_net(non_terminal_next_states).max(1).values
+        next_state_values[non_terminal_mask] = target_Q_values[non_terminal_mask]
+    
+    expected_state_action_values = (next_state_values * GAMMA) + selected_rewards 
 
+    criterion = nn.SmoothL1Loss()
+    loss = criterion(state_action_values, expected_state_action_values.unsqueeze(1))
 
     optimizer.zero_grad()
     loss.backward()
     torch.nn.utils.clip_grad_value_(policy_net.parameters(), 100)
     optimizer.step()
-    return loss
-
-
-
-null_state = torch.zeros(3,21,19).to(device)
-
+    return loss.item()
 
 def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
-    episode_steps = []
+    action_counts = []
     scores = []
-    sequence_buffer = deque([null_state for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH) # circular buffer.
+    losses = []
+    sequence_buffer = deque([NULL_STATE for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH) # circular buffer. # move into for loop
 
 
     for i_episode in range(num_episodes):
@@ -86,11 +120,12 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
                 if not game.running():
                     state = game.get_state()
-                    state_tensor = state.unsqueeze(0).to(device) if state is not None else null_state
+                    state_tensor = state.to(device) if state is not None else None 
                     scores.append(game.get_score())
                     reward = -100 if game.is_game_lost() else 100
                     reward_tensor = torch.tensor(reward).unsqueeze(0).to(device)
-                    memory.push(prevState.unsqueeze(0),action.unsqueeze(0),state_tensor,reward_tensor)
+                    memory.push(prevState,action,state_tensor,reward_tensor)
+                    action_counts.append(action_count)
                 continue    
 
             action_count += 1
@@ -101,7 +136,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
             reward_tensor = torch.tensor(score-prevScore).unsqueeze(0).to(device)
 
             if (prevState != None):
-                memory.push(prevState.unsqueeze(0),action.unsqueeze(0),state.unsqueeze(0),reward_tensor)
+                memory.push(prevState,action,state,reward_tensor)
 
             action,epsilon = select_action(policy_net,sequence_buffer)
             game.step(action.item())
@@ -110,10 +145,15 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
 
             if action_count % (BATCH_SIZE/4) == 0:
-                loss = optimize_model(policy_net,target_net,optimizer,memory)
-            
+                loss = optimize_model(policy_net,target_net,optimizer,memory)  
+                losses.append(loss)
                 if verbose:
-                    print_verbose(i_episode,score,reward_tensor,item(),loss,epsilon)
+                    print_verbose(i_episode,score,reward_tensor.item(),loss,epsilon)
+
+    losses = [l for l in losses if l is not None]
+    plot_loss(losses,f"{STEP_FIG_PATH}/loss_{EPISODES}.png")
+    plot_scores(scores,f"{STEP_FIG_PATH}/scores_{EPISODES}.png")
+    plot_steps(action_counts,f"{STEP_FIG_PATH}/steps_{EPISODES}.png") 
 
 
 
@@ -129,7 +169,7 @@ def main(load_path=None):
     memory = ReplayMemory(10000)
     train(policy_net,target_net,optimizer,memory,EPISODES,True)
 
-    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/weights_{EPISODES}_episodes.pth") 
+    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/rnn/rnn_{EPISODES}_episodes.pth") 
 
 if __name__ == "__main__":
     main()
