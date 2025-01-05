@@ -105,9 +105,8 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
     action_counts = []
     scores = []
     losses = []
-    sequence_buffer = deque([NULL_STATE for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH) # circular buffer. # move into for loop
-
-
+    sequence_buffer = deque([NULL_STATE for i in range(SEQUENCE_LENGTH)],maxlen=SEQUENCE_LENGTH) # circular buffer
+    
     for i_episode in range(num_episodes):
         game = Game()
         prevState = None

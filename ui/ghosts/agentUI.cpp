@@ -46,10 +46,16 @@ void AgentUI::setSFPosition(Position pos) {
     this->SFposition.x = pos.x * PIXEL_SIZE;
     this->SFposition.y = pos.y * PIXEL_SIZE;
 }
+
+sf::Vector2f AgentUI::getSFPosition() const {
+    return this->SFposition;    
+}
+
 void AgentUI::scaleSprite() {
     float scale = PIXEL_SIZE / FRAME_SIZE;
     this->sprite->setScale(scale,scale);
 }
+
 
 
 sf::Sprite AgentUI::getSprite() {

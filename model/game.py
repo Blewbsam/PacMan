@@ -50,7 +50,5 @@ if __name__ == "__main__":
     game = Game()
     while game.running():
         game.update()
-        state = game.get_state().numpy()
-        state = state.transpose(1,2,0)
         # print(state.shape)
  

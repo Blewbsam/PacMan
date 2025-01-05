@@ -40,6 +40,9 @@ private:
     void updateGhosts();
     void updateGhost(GhostUI& ghost);
 
+    // hanlding ghost collsions is done in UI for smoother experience
+    void checkGhostCollisions();
+
     void moveGhosts();
     void moveGhost(GhostUI& ghost);
 

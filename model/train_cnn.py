@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 from utils import ReplayMemory, plot_steps, Transition, plot_epsilons,plot_scores,print_verbose
 from model import DQNAgent
 from game import Game, DIRECTIONS
+import time
 
 
 BATCH_SIZE = 128
@@ -20,8 +21,8 @@ EPS_DECAY = 10000
 TAU = 0.005
 LR = 1e-4
 N_ACTIONS = 4
-EPISODES = 4
-SAVE_PATH = "weights"
+EPISODES = 1000
+SAVE_PATH = "weights/cnn"
 STEP_FIG_PATH = "plots"
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
@@ -78,9 +79,6 @@ def optimize_model(policy_net,target_net,optimizer,memory):
     optimizer.step()
     return loss
 
-
-
-
 def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
     episode_steps = []
     scores = []
@@ -114,8 +112,6 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
             game.step(action.item())
             prevState = state
             prevScore = score
-
-    
             
             if action_count % (BATCH_SIZE/4) == 0:
                 # gradient calculations and step
@@ -138,6 +134,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
     plot_steps(episode_steps,f"{STEP_FIG_PATH}/steps_{EPISODES}.png")
     
 def main(load_path=None):
+    start = time.time()
     policy_net = DQNAgent(N_ACTIONS).to(device)
     if load_path != None:
         policy_net.load_state_dict(torch.load(load_path,weights_only=True))
@@ -147,8 +144,9 @@ def main(load_path=None):
     optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
     memory = ReplayMemory(10000)
     train(policy_net,target_net,optimizer,memory,EPISODES,True)
-
-    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/weights_{EPISODES}_episodes.pth") 
+    end = time.time()
+    print("Training time: ", end-start , " seconds")
+    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/cnn_{EPISODES}_episodes.pth") 
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "game.hpp"
+#include "helpers.hpp"
 
 
 
@@ -139,7 +140,7 @@ void GameState::handleCollisions() {
     this->handlePelletCollision();
     this->handlePowerPelletCollision();
     this->checkPelletStatus();
-    this->handleGhostCollisions();
+    // this->handleGhostCollisions();
 }
  
 void GameState::handlePelletCollision() {
@@ -178,17 +179,19 @@ void GameState::freeGhostHouseGhosts() {
 }
 
 
-void GameState::handleGhostCollisions() {
-    Position pacmanPosition = this->pacman_p->getPos();
-    this->handleGhostCollision(this->ghosts.chaser_p,pacmanPosition);
-    this->handleGhostCollision(this->ghosts.ambusher_p,pacmanPosition);
-    this->handleGhostCollision(this->ghosts.fickle_p,pacmanPosition);
-    this->handleGhostCollision(this->ghosts.stupid_p,pacmanPosition);
+void GameState::ghostCollided(GhostType type) {
+    switch (type) {
+        case CHASER: handleGhostCollision(this->ghosts.chaser_p); break;    
+        case AMBUSHER: handleGhostCollision(this->ghosts.ambusher_p); break;    
+        case FICKLE: handleGhostCollision(this->ghosts.fickle_p); break;    
+        case STUPID: handleGhostCollision(this->ghosts.stupid_p); break;    
+        default: break;
+    }
 }
 
-void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
-    if (ghost->getPos() == pacmanPosition) {
-        switch (ghost->getGhostState()){
+
+void GameState::handleGhostCollision(Ghost * ghost) {
+    switch (ghost->getGhostState()){
             case SCATTER:
             case ESCAPE:
             case SLEEP:
@@ -197,9 +200,34 @@ void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
             case FRIGHTENED: this->eatGhost(ghost);break;
         default: // eaten or asleep
             break;
-        }
     }
 }
+
+// void GameState::handleGhostCollisions() {
+//     Position pacmanPosition = this->pacman_p->getPos();
+//     this->handleGhostCollision(this->ghosts.chaser_p,pacmanPosition);
+//     this->handleGhostCollision(this->ghosts.ambusher_p,pacmanPosition);
+//     this->handleGhostCollision(this->ghosts.fickle_p,pacmanPosition);
+//     this->handleGhostCollision(this->ghosts.stupid_p,pacmanPosition);
+// }
+
+
+
+// void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
+//     if (ghost->getPos() == pacmanPosition) {
+//         std::cout << "Handling collision with ghost" << std::endl;
+//         switch (ghost->getGhostState()){
+//             case SCATTER:
+//             case ESCAPE:
+//             case SLEEP:
+//             case CHASE: this->gameLost(); break;
+//             case TRANSITION:
+//             case FRIGHTENED: this->eatGhost(ghost);break;
+//         default: // eaten or asleep
+//             break;
+//         }
+//     }
+// }
 
 void GameState::gameLost() {
     this->gameOver = true;
@@ -260,7 +288,7 @@ std::vector<Position> GameState::getValidNeighbours(Position pos, bool hasEscape
 
 void GameState::updateGlobalState(GhostState newState) {
 
-    static const std::unordered_map<GhostState, std::array<GhostState,2>> canSwitch = {
+    static const std::unordered_map<GhostState, std::array<GhostState,2>> canSwitch = { // ghosts which are in the list of states mapped to each state key can switch to the state key.
         {CHASE, {SCATTER,TRANSITION}},
         {SCATTER, {CHASE}},
         {TRANSITION, {FRIGHTENED}},
@@ -269,12 +297,14 @@ void GameState::updateGlobalState(GhostState newState) {
     std::array<GhostState,2> plausibleStates = canSwitch.at(newState);
     for (Ghost * ghost: this->ghostArray) {
         if (std::find(plausibleStates.begin(), plausibleStates.end(), ghost->getGhostState()) != plausibleStates.end()){
+            if (newState == TRANSITION && ghost->getGhostState() != FRIGHTENED) continue; // this case leaks through for some reason.
             ghost->setGhostState(newState);
         }
     }
     this->globalState = newState;
     this->startStateTimer();
 }
+
 
 bool GameState::isActive(Ghost * ghost) const {
     GhostState state =  ghost->getGhostState();

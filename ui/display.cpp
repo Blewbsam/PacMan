@@ -54,12 +54,12 @@ void Display::update() {
         this->moveGhosts();
 
         gs->handleCollisions();
+        this->checkGhostCollisions();
         this->handleTeleports();
     } else {
         this->gameLost();
     }  
 }
-
 
 void Display::updateGhosts() {
     updateGhost(chaser);
@@ -75,6 +75,14 @@ void Display::updateGhost(GhostUI& ghost) {
             ghost.setDir(this->gs->getGhostDir(type));
             ghost.setState(this->gs->getGhostState(type));
         }
+}
+
+void Display::checkGhostCollisions() {
+    sf::Vector2f pacmanPosition = pacman.getSFPosition();
+    if (chaser.hasCollided(pacmanPosition)) this->gs->ghostCollided(CHASER);
+    if (ambusher.hasCollided(pacmanPosition)) this->gs->ghostCollided(AMBUSHER);
+    if (fickle.hasCollided(pacmanPosition)) this->gs->ghostCollided(FICKLE);
+    if (stupid.hasCollided(pacmanPosition)) this->gs->ghostCollided(STUPID);
 }
 
 

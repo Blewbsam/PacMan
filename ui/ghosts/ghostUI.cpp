@@ -1,6 +1,7 @@
 
 #include <typeinfo>
 #include <filesystem>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 #include "ghostUI.hpp"
 #include "speeds.hpp"
@@ -141,6 +142,13 @@ GhostType GhostUI::getType() const {
     return this->ghostType;
 }
 
+
+bool GhostUI::hasCollided(sf::Vector2f pacmanPosition) const { 
+    sf::Vector2f ghostPosition = this->getSFPosition();
+    double y_dist = std::abs(pacmanPosition.y - ghostPosition.y);
+    double x_dist = std::abs(pacmanPosition.x - ghostPosition.x);
+    return ((y_dist < PIXEL_SIZE) && (x_dist < PIXEL_SIZE));
+}
 
 // Ghost Subclasses constructors
 

@@ -108,6 +108,8 @@ public:
     unsigned int getScore() const;
     bool isGameLost() const;
 
+    void ghostCollided(GhostType type); //added
+
 
 private:
 
@@ -120,8 +122,10 @@ private:
     // and remove it if there is so
     void handlePelletCollision();
     void handlePowerPelletCollision();
-    void handleGhostCollisions();
-    void handleGhostCollision(Ghost * ghost, Position pacmanPosition);
+    // void handleGhostCollisions();s
+    // void handleGhostCollision(Ghost * ghost, Position pacmanPosition);
+
+    void handleGhostCollision(Ghost * ghost);
 
 
     void gameLost(); // signifies that ghosts have collided

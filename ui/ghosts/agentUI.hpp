@@ -37,6 +37,9 @@ public:
     Position getIndexedPosition();
     // setter for SFPosition
     void setSFPosition(Position pos);
+
+    sf::Vector2f getSFPosition() const;
+
     // scales sprite to PIXEL_SIZE
     void scaleSprite();
 
