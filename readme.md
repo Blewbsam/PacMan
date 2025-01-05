@@ -46,28 +46,26 @@ Q-learning is a reinforcement learning algorithm that teaches an agent how to ac
 The Neural network is to act as a q-function for us, giving us key values for every action given a game state. We then pick the aciton which seems to have the highest Q-value, we see how the game contiues and save the game's next state to be used with the action and correspondig state, as well as the reward for backpropagation. For a more detatailed explanation for how we evaluate the loss, take a look at [here](https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning).
 
 ### Model Architectures and inputs:
+Beneah is a list of models trained on. They can be found [here](model/model.py).
+- CNN: Three convolutional layers followed by two linear.
+- RNN: The CNN described above concatanated to an LSTM model.
+- DRNN: Two stacked LSTM models instead of one.
+
+
+The input image fed into these networks is not the direct image seen on the screen but,  one turned into a smaller image approximating each cell by a pixel using [transform_image_with_thresholding](model/utils.py) method.
 
 
 
 ### Training Parameters and result:
 
 | Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay   |  Training Time (h) 
-| -------- | ------- | --------| -------------------| -------------| --------| --------|-------| ------
+| -------- | ------- | --------| -------------------| -------------| --------| -------- |-------|----|----
 | CNN_1000  |  CNN    | 1000 | See | 1e-4 | 0.99 | 128 | NA | See
 | RNN_5000 |  RNN    | 5000 |  550 | 1e-4  | 0.95 | 128 | 4 | NA
 | RNN_5000 | RNN | 50000 | See | 1e-4 | 0.99 | 128 | 8 | Will See
 
 
 
-
-
-
-
-
-
 ### How to play Pacman
 ### how to train model
-### how to load up model and see behaviouirs
-
-
-
+### how to load up model and see behaviours

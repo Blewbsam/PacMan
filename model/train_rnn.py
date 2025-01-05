@@ -6,7 +6,7 @@ import math
 import time
 import random
 import matplotlib.pyplot as plt
-from utils import ReplayMemory, plot_steps, Transition, plot_epsilons,plot_scores,print_verbose, plot_loss
+from utils import ReplayMemory, plot_steps,plot_scores,print_verbose, plot_loss
 from model import DQRNAgent
 from game import Game, DIRECTIONS
 from collections import deque

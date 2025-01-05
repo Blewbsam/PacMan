@@ -23,8 +23,6 @@ private:
     FickleUI fickle;
     StupidUI stupid;
 
-    sf::RectangleShape wall;
-    sf::RectangleShape door;
     sf::RectangleShape empty;
     sf::CircleShape pellet;
     sf::CircleShape powerPellet;
@@ -56,6 +54,8 @@ private:
 
     // use the grid_t structure to render display
     void renderMaze(); 
+
+    void scaleSprite(sf::Sprite &sprite);
 
     void selectWall(sf::Sprite &sprite,grid_t& grid,size_t x, size_t y,size_t height, size_t width);
 

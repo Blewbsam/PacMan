@@ -26,10 +26,6 @@ void Display::initGameObjects() {
 
     gs->updatePacmanPos(this->pacman.getIndexedPosition());
 
-    this->wall.setSize(sf::Vector2f(PIXEL_SIZE,PIXEL_SIZE));
-    this->wall.setFillColor(sf::Color::Blue);
-    this->door.setSize(sf::Vector2f(PIXEL_SIZE,PIXEL_SIZE));
-    this->door.setFillColor(sf::Color::White);
     this->empty.setSize(sf::Vector2f(PIXEL_SIZE,PIXEL_SIZE));
     this->empty.setFillColor(sf::Color::Black);
 
@@ -196,8 +192,12 @@ void Display::renderMaze() {
         std::cerr << "Failed to load Wall animation texture!" << std::endl;
         return;
     }
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
+    sf::Sprite wallSprite;
+    sf::Sprite doorSprite;
+    wallSprite.setTexture(texture);
+    doorSprite.setTexture(texture);
+    doorSprite.setTextureRect(sf::IntRect(FRAME_SIZE * 2, FRAME_SIZE * 1 ,FRAME_SIZE, FRAME_SIZE));
+    this->scaleSprite(doorSprite);
     // on assumption that grid is rectangular
     size_t grid_height = grid.size();
     size_t grid_width = grid[0].size();
@@ -207,9 +207,9 @@ void Display::renderMaze() {
             switch (grid[y][x])
             {
             case WALL:
-                this->selectWall(sprite,grid,x,y,grid_height,grid_width);
-                sprite.setPosition((x-1) * PIXEL_SIZE, y * PIXEL_SIZE);
-                this->window->draw(sprite);
+                this->selectWall(wallSprite,grid,x,y,grid_height,grid_width);
+                wallSprite.setPosition((x-1) * PIXEL_SIZE, y * PIXEL_SIZE);
+                this->window->draw(wallSprite);
                 break; 
             case PELLET:
                 this->pellet.setPosition((x-1) * PIXEL_SIZE + PELLET_OFFSET, y * PIXEL_SIZE + PELLET_OFFSET);
@@ -220,8 +220,8 @@ void Display::renderMaze() {
                 this->window->draw(this->powerPellet);
                 break;
             case DOOR:
-                this->door.setPosition((x-1) * PIXEL_SIZE, y * PIXEL_SIZE);
-                this->window->draw(this->door);  
+                doorSprite.setPosition((x-1) * PIXEL_SIZE, y * PIXEL_SIZE);
+                this->window->draw(doorSprite);  
                 break;
             default:
                 this->empty.setPosition((x-1) * PIXEL_SIZE, y * PIXEL_SIZE);
@@ -233,38 +233,25 @@ void Display::renderMaze() {
 }
 
 void Display::selectWall(sf::Sprite &sprite, grid_t &grid, size_t x, size_t y, size_t height, size_t width) {
-    bool up = 0, down = 0, left = 0, right = 0;
-    // Down flag
+    bool up = 0, down = 0, left = 0, right = 0; // use flagging for binary indexing
+
+
     if (y < height - 1 && WALL == grid[y+1][x]) down = 1;
-    // if (y == height - 1) down = 1;  // Treat bottom row as a wall
-
-    // Left flag
+    // if (y == height - 1) down = 1;  
     if (x > 0 && WALL == grid[y][x-1]) left = 1;
-
-    // Right flag
     if (x < width - 1 && WALL == grid[y][x+1]) right = 1;
-
-    // Up flag
     if (y > 0 && WALL == grid[y-1][x]) up = 1;
 
-    //  binary indexing
     int index = down + 2 * (left + 2 * (right + 2 * up));
     sprite.setTextureRect(sf::IntRect(FRAME_SIZE * index, 0, FRAME_SIZE, FRAME_SIZE));
-    float scale = PIXEL_SIZE / FRAME_SIZE;
-    sprite.setScale(scale, scale);
-
-    // Debug
-    // std::cout << "Tile at (" << x << ", " << y << ") -> Index: " << index
-    //           << ", Flags [Up: " << up << ", Down: " << down
-    //           << ", Left: " << left << ", Right: " << right << "]" << std::endl;
-
-    //           std::cout << "Grid[" << x << "][" << y << "]: " << grid[x][y] << std::endl;
-    // std::cout << "Neighbors: " 
-    //         << "Left=" << grid[x - 1][y] 
-    //         << ", Right=" << grid[x + 1][y]
-    //         << ", Down=" << grid[x][y + 1] << std::endl;
+    this->scaleSprite(sprite);
 }
 
+
+void Display::scaleSprite(sf::Sprite &sprite) {
+    float scale = PIXEL_SIZE / FRAME_SIZE;
+    sprite.setScale(scale, scale);
+}
 
 bool Display::pacmanContainedInCell() {
     return this->pacman.containedInCell();
