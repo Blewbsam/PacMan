@@ -58,11 +58,13 @@ The input image fed into these networks is not the direct image seen on the scre
 
 ### Training Parameters and result:
 
-| Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay   |  Training Time (h) 
-| -------- | ------- | --------| -------------------| -------------| --------| -------- |-------|----|----
-| CNN_1000  |  CNN    | 1000 | See | 1e-4 | 0.99 | 128 | NA | See
-| RNN_5000 |  RNN    | 5000 |  550 | 1e-4  | 0.95 | 128 | 4 | NA
-| RNN_5000 | RNN | 50000 | See | 1e-4 | 0.99 | 128 | 8 | Will See
+| Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay | Epsilon Min  | Optimizer
+| -------- | ------- | --------| -------------------| -------------| --------| -------- |-------|---- | ---- |
+| CNN_1000  |  CNN    | 1000 | 316 | 1e-4 | 0.99 | 128 | NA | 10000 | 0.05 | AdamW
+| RNN_5000 |  RNN    | 5000 |  550 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW
+| RNN_5000 | RNN | 5000 | 180 | 1e-4 | 0.99 | 128 | 8 |  10000 | 0.05 | AdamW
+| DRNN_5000 | RNN | 5000 | see | 1e-4 | 0.99 | 64 | 4  | 10000 | 0.1  | AdamW
+
 
 
 
