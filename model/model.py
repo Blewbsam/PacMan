@@ -24,6 +24,10 @@ class DQNAgent(nn.Module):
     def forward(self,x):
         return self.model(x)
 
+    def get_name(self):
+        return "DQN"
+    
+
 
 class DQRNAgent(nn.Module):
     '''
@@ -59,6 +63,8 @@ class DQRNAgent(nn.Module):
         
         x = self.fc(x)  # Output shape: [batch_size, num_actions]
         return x
+    def get_name(self):
+        return "DQRN"
 
 class DQRNSAgent(nn.Module):
     '''
@@ -95,6 +101,8 @@ class DQRNSAgent(nn.Module):
         x = self.lin(x)  # Output shape: [batch_size, num_actions]
         x = self.softmax(x)
         return x
+    def get_name():
+        return "DQRNS"
     
 
 
@@ -133,6 +141,8 @@ class DQRNDeepAgent(nn.Module):
         # Fully connected layer for output
         x = self.fc(x)  # Output shape: [batch_size, num_actions]
         return x
+    def get_name(self):
+        return "DQRNDeep"
     
 
 
@@ -159,3 +169,5 @@ class FullDQRNAgent(nn.Module):
     
     def forward(self,x):
         raise NotImplementedError()
+    def get_name(self):
+        return "FullDQRN"
