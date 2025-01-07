@@ -6,7 +6,7 @@ I've experimented with various neural network architectures and data processing 
 
 # Game Engine
 For designing the game I decided to use the Simple and Fast Multimedia (SFML) library in c++. It is then integrated into python through building an API using pybind11. Only methods that are directly relevant to model training have been exported. These can be found in [binding.cpp](ui/bindings.cpp).
-![game display](./images/game-screen.png)
+![game display](./images/gamescreen.png)
 
 ### Score Heurisitc:
 Here I will outline how the score in the game works:
@@ -58,16 +58,30 @@ The input image fed into these networks is not the direct image seen on the scre
 
 ### Training Parameters and result:
 
-| Model Name | Type | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay | Epsilon Min  | Optimizer
-| -------- | ------- | --------| -------------------| -------------| --------| -------- |-------|---- | ---- |
-| CNN_1000  |  CNN    | 1000 | 316 | 1e-4 | 0.99 | 128 | NA | 10000 | 0.05 | AdamW
-| RNN_5000 |  RNN    | 5000 |  550 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW
-| RNN_5000 | RNN | 5000 | 180 | 1e-4 | 0.99 | 128 | 8 |  10000 | 0.05 | AdamW
-| DRNN_5000 | RNN | 5000 | see | 1e-4 | 0.99 | 64 | 4  | 10000 | 0.1  | AdamW
+| Model Name     | Type  | Episodes | Median Score | Learning Rate | Gamma | Batch Size | Sequence Length | Epsilon Decay | Epsilon Min | Optimizer | Path       |
+|----------------|-------|----------|--------------|---------------|-------|------------|-----------------|---------------|-------------|-----------|------------|
+| DQNAgent       | CNN   | 1000     | 316          | 1e-4          | 0.99  | 128        | NA              | 10000         | 0.05        | AdamW     | NA         |
+| DQRNAgent      | RNN   | 5000     | 550          | 1e-4          | 0.95  | 128        | 4               | 10000         | 0.05        | AdamW     | NA         |
+| DQRNAgent      | RNN   | 5000     | 180          | 1e-4          | 0.99  | 128        | 8               | 10000         | 0.05        | AdamW     | NA         |
+| DQRNDeepAgent  | RNN   | 5000     | 350          | 1e-4          | 0.99  | 64         | 4               | 10000         | 0.1         | AdamW     | rnn_3000   |
+
+Implemented after changing reward function
+| DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_5000_episodes_2 
+| DQRNAgent |  RNN    | 5000 |  380 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | Adam | rnn_adam_5000_episodes
+| DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_softmax_5000_episodes 
+
+| DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes
+| DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_adam_episodes
 
 
 
+## Set up:
+To play pacman: 
+```python
+git clone https://github.com/Blewbsam/ReinforcedPacman.git
+python model/game.py
+```
 
-### How to play Pacman
-### how to train model
-### how to load up model and see behaviours
+To train torch model:
+
+To see trained models in action:

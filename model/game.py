@@ -18,12 +18,23 @@ class Game:
     def update(self):
         self.display.update()
         self.display.render()
-    def get_state(self):    
+    def get_state(self):
+        if self.gs.game_over():
+            return None
+        image = self.display.get_screenshot() # numpy array
+        image = image.transpose(2,0,1)
+        return torch.from_numpy(image).float()
+    
+    def get_reduced_state(self):  
         if self.gs.game_over():
             return None
         image = transform_image_with_thresholding(self.display.get_screenshot())
         image = image.transpose(2,0,1)
         return torch.from_numpy(image).float()
+
+
+
+
     def get_score(self):
         return self.gs.get_score()
     def running(self):
@@ -34,7 +45,6 @@ class Game:
         # makes action in environment
         assert action >= 0 and action <= 3
         self._step_count += 1
-        cur_state = self.get_state()
         self.display.step(action)
         self.update()
     def get_step_count(self):
@@ -48,7 +58,16 @@ class Game:
 
 if __name__ == "__main__":
     game = Game()
+    v = 0
     while game.running():
+        v += 1
         game.update()
+        if v == 100:
+            state = game.get_state()
+            state = state.permute(1, 2, 0)
+            display_image(state)
+            state  = game.get_reduced_state()
+            state  = state.permute(1,2,0)
+            display_image(state)
         # print(state.shape)
  

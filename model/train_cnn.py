@@ -93,7 +93,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
             if not game.decision_available():
                 game.update()
                 if not game.running():
-                    state = game.get_state()
+                    state = game.get_reduced_state()
                     state_tensor = state.unsqueeze(0).to(device) if state is not None else None
                     scores.append(game.get_score())
                     reward = -100 if game.is_game_lost() else 100 # penalty for losing the game and extreme reward for winning
@@ -103,7 +103,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
             action_count += 1
 
-            state = game.get_state().to(device)
+            state = game.get_reduced_state().to(device)
             score = game.get_score()
             reward_tensor = torch.tensor(score - prevScore).unsqueeze(0).to(device)
             if (prevState != None):

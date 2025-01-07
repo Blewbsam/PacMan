@@ -7,7 +7,7 @@ import time
 import random
 import matplotlib.pyplot as plt
 from utils import ReplayMemory, plot_steps,plot_scores,print_verbose, plot_loss
-from model import DQRNAgent
+from model import DQRNSAgent
 from game import Game, DIRECTIONS
 from collections import deque
 
@@ -19,10 +19,10 @@ EPS_END = 0.05
 EPS_DECAY = 10000
 LR = 1e-4
 N_ACTIONS = 4
-EPISODES = 5000
+EPISODES = 2000
 SAVE_PATH = "weights"
 STEP_FIG_PATH = "plots/RNN"
-SEQUENCE_LENGTH = 8
+SEQUENCE_LENGTH = 4
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 print(device)
 
@@ -118,7 +118,7 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
                 game.update()
 
                 if not game.running():
-                    state = game.get_state()
+                    state = game.get_reduced_state()
                     state_tensor = state.to(device) if state is not None else None 
                     scores.append(game.get_score())
                     reward = -100 if game.is_game_lost() else 100
@@ -129,10 +129,10 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
             action_count += 1
 
-            state = game.get_state().to(device)
+            state = game.get_reduced_state().to(device)
             sequence_buffer.append(state)
             score = game.get_score()
-            reward_tensor = torch.tensor(score-prevScore).unsqueeze(0).to(device)
+            reward_tensor = torch.tensor((score-prevScore)/10).unsqueeze(0).to(device) # added devided by 10 to scale scores down
 
             if (prevState != None):
                 memory.push(prevState,action,state,reward_tensor)
@@ -148,6 +148,9 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
                 losses.append(loss)
                 if verbose:
                     print_verbose(i_episode,score,reward_tensor.item(),loss,epsilon)
+            else:
+                if verbose:
+                    print_verbose(i_episode,score,reward_tensor.item(),None,epsilon)
 
     losses = [l for l in losses if l is not None]
     plot_loss(losses,f"{STEP_FIG_PATH}/loss_{EPISODES}.png")
@@ -158,17 +161,17 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
 
 def main(load_path=None):
-    policy_net = DQRNAgent(N_ACTIONS).to(device)
+    policy_net = DQRNSAgent(N_ACTIONS).to(device)
     if load_path != None:
         policy_net.load_state_dict(torch.load(load_path,weights_only=True))
-    target_net = DQRNAgent(N_ACTIONS).to(device)
+    target_net = DQRNSAgent(N_ACTIONS).to(device)
     target_net.load_state_dict(policy_net.state_dict())
 
-    optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
+    optimizer = optim.Adam(policy_net.parameters(),lr=LR,amsgrad=True)
     memory = ReplayMemory(10000)
     train(policy_net,target_net,optimizer,memory,EPISODES,True)
 
-    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/rnn/rnn_{EPISODES}_episodes.pth") 
+    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/rnn/rnn_softmax_{EPISODES}_adam_episodes.pth") 
 
 if __name__ == "__main__":
     main()

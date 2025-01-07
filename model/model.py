@@ -4,6 +4,9 @@ import torch.nn as nn
 import numpy as np
 
 class DQNAgent(nn.Module):
+    '''
+    Pure Convolutional Network
+    '''
     def __init__(self,num_actions):
         super().__init__()
         self.model = nn.Sequential(
@@ -23,6 +26,9 @@ class DQNAgent(nn.Module):
 
 
 class DQRNAgent(nn.Module):
+    '''
+    Convolutional with a lstm appended
+    '''
     def __init__(self,num_actions):
         super().__init__()
         self.cnn = nn.Sequential(
@@ -35,7 +41,7 @@ class DQRNAgent(nn.Module):
             nn.Flatten()
         )
         self.lstm = nn.LSTM(input_size=195, hidden_size=512, batch_first=True)
-        self.fc = nn.Linear(512, num_actions)  # Output 4 actions
+        self.fc = nn.Linear(512, num_actions)  # Output 4 actions 
     def forward(self, x):
         batch_size, seq_len, channels, height, width = x.size()
 
@@ -53,9 +59,11 @@ class DQRNAgent(nn.Module):
         
         x = self.fc(x)  # Output shape: [batch_size, num_actions]
         return x
-    
 
-class DQRNDeepAgent(nn.Module):
+class DQRNSAgent(nn.Module):
+    '''
+    Convolutional with a lstm appended
+    '''
     def __init__(self,num_actions):
         super().__init__()
         self.cnn = nn.Sequential(
@@ -63,7 +71,45 @@ class DQRNDeepAgent(nn.Module):
             nn.ReLU(),
             nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1),
             nn.ReLU(),
-            nn.Conv2d(in_channels=32,out_channels=1,kernel_size=3,stride=1), # only different between two models
+            nn.Conv2d(in_channels=32,out_channels=1,kernel_size=3,stride=1),
+            nn.ReLU(),
+            nn.Flatten()
+        )
+        self.lstm = nn.LSTM(input_size=195, hidden_size=512, batch_first=True)
+        self.lin = nn.Linear(512, num_actions)  # Output 4 actions 
+        self.softmax = nn.Softmax()
+    def forward(self, x):
+        batch_size, seq_len, channels, height, width = x.size()
+
+        x = x.view(batch_size * seq_len, channels, height, width)  # Shape: [batch_size * seq_len, channels, height, width]
+        
+        x = self.cnn(x)  # Shape: [batch_size * seq_len, feature_dim]
+        
+        feature_dim = x.size(-1)
+        x = x.view(batch_size, seq_len, feature_dim)  # Shape: [batch_size, seq_len, feature_dim]
+        
+        # Process with LSTM
+        lstm_out, (h_n, c_n) = self.lstm(x)  # LSTM output: [batch_size, seq_len, hidden_size]
+        
+        x = h_n[-1]  # Final hidden state: [batch_size, hidden_size]
+        x = self.lin(x)  # Output shape: [batch_size, num_actions]
+        x = self.softmax(x)
+        return x
+    
+
+
+class DQRNDeepAgent(nn.Module):
+    '''
+    Convolutional with two layered lstm appended
+    '''
+    def __init__(self,num_actions):
+        super().__init__()
+        self.cnn = nn.Sequential(
+            nn.Conv2d(in_channels=3,out_channels=16,kernel_size=3,stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=32,out_channels=1,kernel_size=3,stride=1),
             nn.ReLU(),
             nn.Flatten()
         )
@@ -87,14 +133,29 @@ class DQRNDeepAgent(nn.Module):
         # Fully connected layer for output
         x = self.fc(x)  # Output shape: [batch_size, num_actions]
         return x
+    
 
 
-v1 = DQRNAgent(4)
-print(v1)
-total_params = sum(p.numel() for p in v1.parameters())
-print(total_params)
+class FullDQRNAgent(nn.Module):
+    '''
+    
+    '''
+    def __init__(self,num_actions):
+        super().__init__()
+        self.cnn = nn.Sequential(
+            nn.MaxPool2d(5,1),
+            nn.Conv2d(in_channels=3,out_channels=16,kernel_size=3,stride=1),
+            nn.ReLU(),
+            nn.AvgPool2d(5,1),
+            nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=32,out_channels=1,kernel_size=3,stride=1), 
+            nn.ReLU(),
+            nn.Flatten()
+        )
 
-mode = DQRNDeepAgent(4)
-print(mode)
-total_params = sum(p.numel() for p in mode.parameters())
-print(total_params)
+        self.lstm = nn.LSTM(input_size=200,hidden_size=512, num_layers=3, batch_first=True,dropout=0)
+        self.fc = nn.Linear(512,num_actions)
+    
+    def forward(self,x):
+        raise NotImplementedError()
