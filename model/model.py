@@ -171,3 +171,20 @@ class FullDQRNAgent(nn.Module):
         raise NotImplementedError()
     def get_name(self):
         return "FullDQRN"
+    
+
+
+def getModel(label):
+    match label:
+        case "DQNAgent":
+            return DQNAgent
+        case "DQRNAgent":
+            return DQRNAgent
+        case "DQRNSAgent":
+            return DQRNSAgent
+        case "DQRNDeepAgent":
+            return DQRNDeepAgent
+        case "FullDQRNAgent":
+            return FullDQRNAgent
+        case _:
+            raise NameError()

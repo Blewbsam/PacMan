@@ -52,7 +52,7 @@ Beneah is a list of models trained on. They can be found [here](model/model.py).
 - DRNN: Two stacked LSTM models instead of one.
 
 
-The input image fed into these networks is not the direct image seen on the screen but,  one turned into a smaller image approximating each cell by a pixel using [transform_image_with_thresholding](model/utils.py) method.
+The input image fed into these networks is not the direct image seen on the screen but,  one turned into a smaller image approximating each cell by a pixel using [transform_image_with_thresholding](model/utils.py) method. A sample is shown below: ![image](./images/filtered-game.png).
 
 
 
@@ -64,12 +64,10 @@ The input image fed into these networks is not the direct image seen on the scre
 | DQRNAgent      | RNN   | 5000     | 550          | 1e-4          | 0.95  | 128        | 4               | 10000         | 0.05        | AdamW     | NA         |
 | DQRNAgent      | RNN   | 5000     | 180          | 1e-4          | 0.99  | 128        | 8               | 10000         | 0.05        | AdamW     | NA         |
 | DQRNDeepAgent  | RNN   | 5000     | 350          | 1e-4          | 0.99  | 64         | 4               | 10000         | 0.1         | AdamW     | rnn_3000   |
-
-Implemented after changing reward function
-| DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_5000_episodes_2 
+| DQRNAgent    |  RNN    | 5000   |  410        | 1e-4            | 0.95    | 128        | 4             | 10000        | 0.05 | AdamW | rnn_5000_episodes_2 |
+The below models were made from reduced rewards
 | DQRNAgent |  RNN    | 5000 |  380 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | Adam | rnn_adam_5000_episodes
 | DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_softmax_5000_episodes 
-
 | DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes
 | DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_adam_episodes
 
@@ -84,4 +82,8 @@ python model/game.py
 
 To train torch model:
 
-To see trained models in action:
+To see trained models in action run:
+```python
+python model/evaluate.py [Model Name] [Path] [Type] [Episodes]
+```
+where the parameters are those specified by labels in table above.

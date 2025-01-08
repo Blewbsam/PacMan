@@ -160,18 +160,18 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
 
 
 
-def main(load_path=None):
-    policy_net = DQRNSAgent(N_ACTIONS).to(device)
+def main(model,load_path=None):
+    policy_net = model(N_ACTIONS).to(device)
     if load_path != None:
         policy_net.load_state_dict(torch.load(load_path,weights_only=True))
-    target_net = DQRNSAgent(N_ACTIONS).to(device)
+    target_net = model(N_ACTIONS).to(device)
     target_net.load_state_dict(policy_net.state_dict())
 
     optimizer = optim.Adam(policy_net.parameters(),lr=LR,amsgrad=True)
     memory = ReplayMemory(10000)
     train(policy_net,target_net,optimizer,memory,EPISODES,True)
 
-    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/rnn/rnn_softmax_{EPISODES}_adam_episodes.pth") 
+    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/rnn/{model.get_name()}_{EPISODES}_adam_episodes.pth") 
 
 if __name__ == "__main__":
-    main()
+    main(DQRNSAgent)
