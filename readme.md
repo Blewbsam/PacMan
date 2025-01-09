@@ -46,7 +46,7 @@ Q-learning is a reinforcement learning algorithm that teaches an agent how to ac
 The Neural network is to act as a q-function for us, giving us key values for every action given a game state. We then pick the aciton which seems to have the highest Q-value, we see how the game contiues and save the game's next state to be used with the action and correspondig state, as well as the reward for backpropagation. For a more detatailed explanation for how we evaluate the loss, take a look at [here](https://www.turing.com/kb/how-are-neural-networks-used-in-deep-q-learning).
 
 ### Model Architectures and inputs:
-Beneah is a list of models trained on. They can be found [here](model/model.py).
+Beneath is a list of models trained on. They can be found [here](model/model.py).
 - CNN: Three convolutional layers followed by two linear.
 - RNN: The CNN described above concatanated to an LSTM model.
 - DRNN: Two stacked LSTM models instead of one.
@@ -67,11 +67,10 @@ The input image fed into these networks is not the direct image seen on the scre
 | DQRNAgent      | RNN   | 5000     | 180          | 1e-4          | 0.99  | 128        | 8               | 10000         | 0.05        | AdamW     | NA         |
 | DQRNDeepAgent  | RNN   | 5000     | 350          | 1e-4          | 0.99  | 64         | 4               | 10000         | 0.1         | AdamW     | rnn_3000   |
 | DQRNAgent    |  RNN    | 5000   |  410        | 1e-4            | 0.95    | 128        | 4             | 10000        | 0.05 | AdamW | rnn_5000_episodes_2 |
-The below models were made from reduced rewards
 | DQRNAgent |  RNN    | 5000 |  380 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | Adam | rnn_adam_5000_episodes
 | DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_softmax_5000_episodes 
-| DQRNSAgent | RNN | 5000 | 390 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes (train to 5000?)
-| DQRNSAgent | RNN | 2000 | 400 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | Adam | rnn_softmax_2000_adam_episodes (train to 5000?)
+| DQRNSAgent | RNN | 5000 | 390 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes 
+| DQRNSAgent | RNN | 2000 | 400 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | Adam | rnn_softmax_2000_adam_episodes 
 
 
 
@@ -82,7 +81,7 @@ git clone https://github.com/Blewbsam/ReinforcedPacman.git
 python model/game.py
 ```
 
-To train torch model:
+To train torch model, import model into [train_rnn]("model/train_rnn.py") or [train_cnn]("model/train_cnn.py) and pass the model to main.
 
 To see trained models in action run:
 ```python
