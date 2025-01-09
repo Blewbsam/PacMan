@@ -70,7 +70,7 @@ def main(nn_model,weigth_path,isRNN,episodes):
     print("Average score:", sum(scores) / len(scores))
     plot_scores(scores)
 
-if __name__ == "__main__": # expecting input to be python evaluate.py [agent-label] [agent-type] [path] [model-type] [episodes]
+if __name__ == "__main__": # expecting input to be python evaluate.py [agent-type] [path] [model-type] [episodes]
     args = sys.argv
     path = args[1]
     isRNN = bool()

@@ -52,7 +52,9 @@ Beneah is a list of models trained on. They can be found [here](model/model.py).
 - DRNN: Two stacked LSTM models instead of one.
 
 
-The input image fed into these networks is not the direct image seen on the screen but,  one turned into a smaller image approximating each cell by a pixel using [transform_image_with_thresholding](model/utils.py) method. A sample is shown below: ![image](./images/filtered-game.png).
+The input image fed into these networks is not the direct image seen on the screen but,  one turned into a smaller image approximating each cell by a pixel using [transform_image_with_thresholding](model/utils.py) method. A sample is shown below:
+
+ ![image](./images/filtered-game.png).
 
 
 
@@ -68,8 +70,8 @@ The input image fed into these networks is not the direct image seen on the scre
 The below models were made from reduced rewards
 | DQRNAgent |  RNN    | 5000 |  380 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | Adam | rnn_adam_5000_episodes
 | DQRNAgent |  RNN    | 5000 |  410 | 1e-4  | 0.95 | 128 | 4 | 10000 | 0.05 | AdamW | rnn_softmax_5000_episodes 
-| DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes
-| DQRNSAgent | RNN | 2000 | None | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_adam_episodes
+| DQRNSAgent | RNN | 5000 | 390 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | rnn_softmax_2000_episodes (train to 5000?)
+| DQRNSAgent | RNN | 2000 | 400 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | Adam | rnn_softmax_2000_adam_episodes (train to 5000?)
 
 
 

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import torch
 from utils import *
+from utils import transform_image_with_thresholding
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'build')) # relative path to build folder used for import
 import pacman
 
@@ -31,9 +32,6 @@ class Game:
         image = transform_image_with_thresholding(self.display.get_screenshot())
         image = image.transpose(2,0,1)
         return torch.from_numpy(image).float()
-
-
-
 
     def get_score(self):
         return self.gs.get_score()

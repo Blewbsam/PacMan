@@ -5,6 +5,7 @@ import random
 from collections import deque, namedtuple
 
 
+
 def display_image(img_array):
     print("image shape: ", img_array.shape)
     plt.imshow(img_array)
@@ -81,7 +82,9 @@ def plot_loss(loss,path):
 
 
 
-def print_verbose(episode,score,reward,loss,epsilon):
+
+def print_verbose(episode,score,reward,loss,epsilon,q_value,action_index):
+    from game import DIRECTIONS
     print("----------------------")
     print(f"Epsiode: {episode}")
     print(f"Score: {score}")
@@ -89,6 +92,9 @@ def print_verbose(episode,score,reward,loss,epsilon):
     if (loss is not None):
         print(f"Loss: {loss:.4f}")
     print(f"Epsilon: {epsilon:.4f}")
+    if (q_value is not None) and (action_index is not None):
+        print(f"Action: {DIRECTIONS[action_index]}")
+        print(f"Actions q-value: {q_value:4f}")
     print("----------------------")
 
 
