@@ -164,7 +164,7 @@ def main(model, load_path=None):
     memory = ReplayMemory(10000)
     train(policy_net, target_net, optimizer, memory, EPISODES, verbose=True)
 
-    torch.save(policy_net.state_dict(), f"{SAVE_PATH}/rnn/{model.get_name()}_5000_episodes.pth")
+    torch.save(policy_net.state_dict(), f"{SAVE_PATH}/RNN/{model.get_name()}_{EPISODES}.pth")
 
 
 if __name__ == "__main__":

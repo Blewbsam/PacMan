@@ -143,17 +143,17 @@ def train(policy_net,target_net,optimizer,memory,num_episodes,verbose=False):
     plot_scores(scores,f"{STEP_FIG_PATH}/scores_{EPISODES}.png")
     plot_steps(episode_steps,f"{STEP_FIG_PATH}/steps_{EPISODES}.png")
     
-def main(load_path=None):
-    policy_net = DQNAgent(N_ACTIONS).to(device)
+def main(model,load_path=None):
+    policy_net = model(N_ACTIONS).to(device)
     if load_path != None:
         policy_net.load_state_dict(torch.load(load_path,weights_only=True))
-    target_net = DQNAgent(N_ACTIONS).to(device)
+    target_net = model(N_ACTIONS).to(device)
     target_net.load_state_dict(policy_net.state_dict())
 
     optimizer = optim.AdamW(policy_net.parameters(),lr=LR,amsgrad=True)
     memory = ReplayMemory(10000)
     train(policy_net,target_net,optimizer,memory,EPISODES,True)
-    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/cnn_{EPISODES}_episodes.pth") 
+    torch.save(policy_net.state_dict(),f"{SAVE_PATH}/CNN/{model.get_name()}_{EPISODES}.pth") 
 
 if __name__ == "__main__":
-    main()
+    main(DQNAgent)
