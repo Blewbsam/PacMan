@@ -68,7 +68,11 @@ The input image fed into these networks is not the direct image seen on the scre
 | DQRNAgent      | RNN   | 5000     | 180          | 1e-4          | 0.99  | 128        | 8               | 10000         | 0.05        | AdamW     | DQRN_5000_8.pth        |
 | DQRNDeep  | RNN   | 5000     | 350          | 1e-4          | 0.99  | 64         | 4               | 10000         | 0.1         | AdamW     | DQRNDEEP_5000.pth  |
 | DQRNSAgent | RNN | 5000 | 390 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | AdamW | DQRNS_5000.pth
-| DQRNSAgent | RNN | 2000 | 400 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | Adam | DQRNS_5000_adam.pth
+| DQRNSAgent | RNN | 5000 | 400 | 1e-4 | 0.95 | 128  | 4 | 10000 | 0.05 | Adam | DQRNS_5000_adam.pth
+|DQRNDeep | RNN | 3000C | 1090 | 1e-4 | 0.95 | 128 | 8 | 10000 | 0.05  | AdamW | DQRNDeep_1000_8.pth 
+|DQRNDeep | RNN | 1000 | 300 | Cyclic: 1e-5-1e-2 | 0.95 | 128 | 8 | 10000 | 0.05  | SGD | DQRNDeep_1000_8_SGD.pth
+|DQRNDeep | RNN | 1000 | 300 | Cyclic: 1e-5-1e-2 | 0.95 | 128 | 8 | 10000 | 0.05  | SGD | DQRNDeep_1000_8_SGD_1000.pth
+
 
 ## Set up:
 To play pacman: 

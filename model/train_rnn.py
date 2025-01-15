@@ -5,11 +5,11 @@ import random
 import math
 import numpy as np
 from collections import deque
-import matplotlib.pyplot as plt
+
 
 from utils import ReplayMemory, plot_steps, plot_scores, print_verbose, plot_loss
-from model import DQRNAgent
-from game import Game, DIRECTIONS
+from model import DQRNDeepAgent
+from game import Game
 
 
 # Configurations & Hyperparameters
@@ -23,10 +23,9 @@ N_ACTIONS = 4
 EPISODES = 3000
 SAVE_PATH = "weights"
 STEP_FIG_PATH = "plots/RNN"
-SEQUENCE_LENGTH = 4
+SEQUENCE_LENGTH = 8
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 NULL_STATE = torch.zeros(3, 21, 19).to(device)  # Default "empty" state tensor
-print(device)
 
 
 steps_done = 0 # total actions generated in all episodes
@@ -46,7 +45,7 @@ def select_action(policy_net, buffer):
         return torch.tensor([random.randint(0, N_ACTIONS - 1)], device=device, dtype=torch.long), eps_threshold, 0
 
 
-def optimize_model(policy_net, target_net, optimizer, memory):
+def optimize_model(policy_net, target_net, optimizer, memory,scheduler=None):
     """Optimize the model using a batch from the replay buffer."""
     if len(memory) < BATCH_SIZE:
         print("Inadequate memory")
@@ -71,6 +70,8 @@ def optimize_model(policy_net, target_net, optimizer, memory):
     loss.backward()
     torch.nn.utils.clip_grad_value_(policy_net.parameters(), 100)
     optimizer.step()
+    if scheduler is not None:
+        scheduler.step()
 
     return loss.item()
 
@@ -96,7 +97,7 @@ def compute_next_state_values(target_net, non_terminal_mask,non_terminal_next_st
     return next_state_values
 
 
-def train(policy_net, target_net, optimizer, memory, num_episodes, verbose=False):
+def train(policy_net, target_net, optimizer, memory, num_episodes,scheduler=None,verbose=False):
     """Train the agent over a number of episodes."""
     action_counts = []
     scores = []
@@ -129,11 +130,14 @@ def train(policy_net, target_net, optimizer, memory, num_episodes, verbose=False
             prevState, prevScore = state, score
 
             if action_count % (BATCH_SIZE / 4) == 0:
-                loss = optimize_model(policy_net, target_net, optimizer, memory)
+                loss = optimize_model(policy_net, target_net, optimizer, memory,scheduler)
                 losses.append(loss)
 
+
+
+
             if verbose:
-                print_verbose(i_episode,score,reward_tensor.item(), loss,epsilon,q_selected,action.item())
+                print_verbose(i_episode,score,reward_tensor.item(), loss,epsilon,q_selected,action.item(),optimizer.param_groups[0]["lr"])
 
     # Plot results after training
     losses = [l for l in losses if l is not None]
@@ -160,12 +164,17 @@ def main(model, load_path=None):
     target_net = model(N_ACTIONS).to(device)
     target_net.load_state_dict(policy_net.state_dict())
 
-    optimizer = optim.Adam(policy_net.parameters(), lr=LR, amsgrad=True)
-    memory = ReplayMemory(10000)
-    train(policy_net, target_net, optimizer, memory, EPISODES, verbose=True)
+    # optimizer = optim.SGD(policy_net.parameters(), lr=LR)
+    optimizer = optim.AdamW(params=policy_net.parameters(),lr=LR,amsgrad=True)
+    # scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer,1e-5,1e-2,step_size_up=1000,verbose=True)
+    scheduler = None
 
-    torch.save(policy_net.state_dict(), f"{SAVE_PATH}/RNN/{model.get_name()}_{EPISODES}.pth")
+
+    memory = ReplayMemory(10000)
+    train(policy_net, target_net, optimizer, memory, EPISODES,scheduler,verbose=True)
+
+    torch.save(policy_net.state_dict(), f"{SAVE_PATH}/RNN/{policy_net.get_name()}_{EPISODES}_{SEQUENCE_LENGTH}.pth")
 
 
 if __name__ == "__main__":
-    main(DQRNAgent)
+    main(DQRNDeepAgent,"./weights/RNN/DQRNDeep_2000_8.pth")

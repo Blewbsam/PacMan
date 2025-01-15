@@ -101,7 +101,7 @@ class DQRNSAgent(nn.Module):
         x = self.lin(x)  # Output shape: [batch_size, num_actions]
         x = self.softmax(x)
         return x
-    def get_name():
+    def get_name(self):
         return "DQRNS"
     
 
@@ -180,6 +180,8 @@ def getModel(label):
             return DQNAgent
         case "DQRNAgent":
             return DQRNAgent
+        case "DQRNDeep":
+            return DQRNDeepAgent
         case "DQRNSAgent":
             return DQRNSAgent
         case "DQRNDeepAgent":

@@ -171,13 +171,11 @@ void GameState::checkPelletStatus() {
     }
 }
 
-
 void GameState::freeGhostHouseGhosts() {
-    if (eatenPelletCount == 1) {this->updateGhostState(AMBUSHER,ESCAPE);}
-    else if (eatenPelletCount == 30){this->updateGhostState(FICKLE,ESCAPE);}
-    else if (eatenPelletCount == 60){this->updateGhostState(STUPID,ESCAPE);}
+    if (eatenPelletCount > 0 && this->ghosts.ambusher_p->getGhostState() == SLEEP) {this->updateGhostState(AMBUSHER,ESCAPE);}
+    else if (eatenPelletCount > 30 && this->ghosts.fickle_p->getGhostState() == SLEEP){this->updateGhostState(FICKLE,ESCAPE);}
+    else if (eatenPelletCount > 60 && this->ghosts.stupid_p->getGhostState() == SLEEP){this->updateGhostState(STUPID,ESCAPE);}
 }
-
 
 void GameState::ghostCollided(GhostType type) {
     switch (type) {
@@ -203,31 +201,6 @@ void GameState::handleGhostCollision(Ghost * ghost) {
     }
 }
 
-// void GameState::handleGhostCollisions() {
-//     Position pacmanPosition = this->pacman_p->getPos();
-//     this->handleGhostCollision(this->ghosts.chaser_p,pacmanPosition);
-//     this->handleGhostCollision(this->ghosts.ambusher_p,pacmanPosition);
-//     this->handleGhostCollision(this->ghosts.fickle_p,pacmanPosition);
-//     this->handleGhostCollision(this->ghosts.stupid_p,pacmanPosition);
-// }
-
-
-
-// void GameState::handleGhostCollision(Ghost * ghost,Position pacmanPosition) {
-//     if (ghost->getPos() == pacmanPosition) {
-//         std::cout << "Handling collision with ghost" << std::endl;
-//         switch (ghost->getGhostState()){
-//             case SCATTER:
-//             case ESCAPE:
-//             case SLEEP:
-//             case CHASE: this->gameLost(); break;
-//             case TRANSITION:
-//             case FRIGHTENED: this->eatGhost(ghost);break;
-//         default: // eaten or asleep
-//             break;
-//         }
-//     }
-// }
 
 void GameState::gameLost() {
     this->gameOver = true;

@@ -32,7 +32,7 @@ def evaluate_rnn(model,episodes):
 
             state = game.get_reduced_state().to(device)
             sequence_buffer.append(state)   
-            action, _ = select_rnn_action(model,sequence_buffer)
+            action, _, _ = select_rnn_action(model,sequence_buffer)
             game.step(action.item())
             if not game.running():
                 scores.append(game.get_score()) 
@@ -52,7 +52,7 @@ def evaluate_cnn(model,episodes):
                     scores.append(game.get_score())
                 continue
             state = game.get_reduced_state().to(device)
-            action, _ = select_cnn_action(model,state)
+            action, _ , _= select_cnn_action(model,state)
             game.step(action.item())
             if not game.running():
                 scores.append(game.get_score())

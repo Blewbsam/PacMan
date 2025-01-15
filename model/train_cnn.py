@@ -23,7 +23,7 @@ EPISODES = 1000
 SAVE_PATH = "weights/cnn"
 STEP_FIG_PATH = "plots"
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-print(device)
+
 
 
 

@@ -83,7 +83,7 @@ def plot_loss(loss,path):
 
 
 
-def print_verbose(episode,score,reward,loss,epsilon,q_value,action_index):
+def print_verbose(episode,score,reward,loss,epsilon,q_value,action_index,learning_rate):
     from game import DIRECTIONS
     print("----------------------")
     print(f"Epsiode: {episode}")
@@ -95,6 +95,7 @@ def print_verbose(episode,score,reward,loss,epsilon,q_value,action_index):
     if (q_value is not None) and (action_index is not None):
         print(f"Action: {DIRECTIONS[action_index]}")
         print(f"Actions q-value: {q_value:4f}")
+    print(f"Learning Rate: {learning_rate}")
     print("----------------------")
 
 
